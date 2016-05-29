@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 
 public class MergeSort {
+	// 归并：重点在于并；辅助空间为O(n)
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
