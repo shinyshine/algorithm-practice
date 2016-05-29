@@ -29,11 +29,24 @@ public class QuickSort {
 	private static void quickSort(int[] a, int left, int right) {
 		// TODO Auto-generated method stub
 		if(left < right) {
-			int q = Partition(a, left, right);
+			int q = RandomPartition(a, left, right);
 			quickSort(a, left, q - 1);
 			quickSort(a, q + 1, right);
 			
 		}
+	}
+
+	private static int RandomPartition(int[] a, int left, int right) {
+		// TODO Auto-generated method stub
+		int i = Random(left, right);
+		Swap(a, left, i);
+		return Partition(a, left, right);
+	}
+
+	private static int Random(int left, int right) {
+		// TODO Auto-generated method stub
+		int i = (int)(Math.random() * (right - left) + left);
+		return i;
 	}
 
 	private static int Partition(int[] a, int left, int right) {
